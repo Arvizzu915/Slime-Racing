@@ -1,0 +1,34 @@
+{
+    "name": "Player",
+    "maps": [
+        {
+            "name": "InLevel",
+            "id": "ce7dd615-c828-4700-bb59-eacef8683c2a",
+            "actions": [
+                {
+                    "name": "Throw",
+                    "type": "Button",
+                    "id": "551a3077-344e-4b6d-9389-2aaef69182e8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fc01f4d9-3c35-4d6b-beba-4ab920df004c",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

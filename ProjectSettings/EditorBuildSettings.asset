@@ -5,9 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Racing.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Bootstrap.unity
+    guid: d6dee18f0821ffd45a15fca01f871da5
+  - enabled: 1
+    path: Assets/Scenes/Scenes/StartZone.unity
+    guid: f3b8f0cfad76b854ea3004ab0348c9e6
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Zone 0.unity
+    guid: b1fcfada1c55ca442b69e8d2c1a83d89
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Zone 2.unity
+    guid: 04fe25785241f8644aa4e97e9c21fb6e
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Zone 3.unity
+    guid: 5b143a32c97dc8f45b9cc764b23bd1fd
   m_configObjects:
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 5eb26b2f6ca95c844a11e5267ffb227a, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
