@@ -37,6 +37,10 @@ public class Aim : MonoBehaviour
             var points = PhysicsTrajectorySimulator.PhysicsSimulatorSingleton.SimulateTrajectory(transform.position, velocitySim);
             visualizer.ShowTrajectory(points);
         }
+        else
+        {
+            CameraPlacement.singleton.posPivot = transform.position;
+        }
     }
 
     public void AimInput(InputAction.CallbackContext ctx)

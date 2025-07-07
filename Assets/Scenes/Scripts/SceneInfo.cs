@@ -14,7 +14,6 @@ public class SceneInfo : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             StartCoroutine(MapManager.singleton.EnterZone(targetScene, adjacentScenes));
-            CameraPlacement.singleton.transform.position = cameraPlace;
         }
     }
 }

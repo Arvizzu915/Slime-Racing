@@ -1,8 +1,19 @@
 using UnityEngine;
+using Mirror;
 
-public class CameraPlacement : MonoBehaviour
+public class CameraPlacement : NetworkBehaviour
 {
     public static CameraPlacement singleton;
+
+    [Header("Scroll Settings")]
+    [SerializeField] private float scrollSpeed = 5f; // Speed at which camera moves
+    [SerializeField] private float edgeSize = 10f; // Distance from screen edge to start scrolling
+
+    [Header("Camera Movement Limits")]
+    [SerializeField] private float minX = -10f;
+    [SerializeField] private float maxX = 10f;
+
+    public Vector3 posPivot;
 
     private void Awake()
     {
@@ -14,5 +25,17 @@ public class CameraPlacement : MonoBehaviour
 
         singleton = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Update()
+    {
+        MoveCamera();
+    }
+
+    void MoveCamera()
+    {
+        if (!isOwned) return;
+        
+        transform.position = PlayerGeneral.singleton.transform.position;
     }
 }
