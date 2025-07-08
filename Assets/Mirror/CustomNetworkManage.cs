@@ -12,7 +12,7 @@ public class CustomNetworkManager : NetworkManager
 
     public void StartHostFromMenu()
     {
-        StartHost(); // Automatically loads onlineScene (Lobby)
+        StartHost();
     }
 
     public void StartClientFromMenu(string ipAddress)
@@ -25,4 +25,5 @@ public class CustomNetworkManager : NetworkManager
     {
         ServerChangeScene("Bootstrap");
     }
+
 }
