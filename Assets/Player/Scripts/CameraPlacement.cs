@@ -36,6 +36,6 @@ public class CameraPlacement : NetworkBehaviour
     {
         if (!isOwned) return;
         
-        transform.position = PlayerGeneral.singleton.transform.position;
+
     }
 }
