@@ -1,27 +1,20 @@
 using Mirror;
 using UnityEngine;
 
-public class LobbyPlayer : NetworkBehaviour
+public class PlayerGeneral : NetworkBehaviour
 {
-    [SyncVar(hook = nameof(OnNameChanged))]
+    public static PlayerGeneral singleton;
+
+    [SyncVar]
     public string playerName;
 
-    public void SetPlayerName(string name)
+    public override void OnStartClient()
     {
-        if (isLocalPlayer)
-        {
-            CmdSetPlayerName(name);
-        }
+        Debug.Log("Player name is: " + playerName);
     }
 
-    [Command]
-    private void CmdSetPlayerName(string name)
+    private void Awake()
     {
-        playerName = name;
-    }
-
-    void OnNameChanged(string oldName, string newName)
-    {
-        LobbyUIManager.Instance?.UpdatePlayerList();
+        singleton = this;
     }
 }

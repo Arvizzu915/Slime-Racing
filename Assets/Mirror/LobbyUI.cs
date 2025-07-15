@@ -11,8 +11,9 @@ public class LobbyUI : MonoBehaviour
 
     void Start()
     {
-        startGameButton.gameObject.SetActive(NetworkServer.active && NetworkClient.isConnected);
+        Debug.Log("Binding listener");
         startGameButton.onClick.AddListener(() => {
+            Debug.Log("StartGameButton clicked");
             ((CustomNetworkManager)NetworkManager.singleton).GoToGameScene();
         });
     }

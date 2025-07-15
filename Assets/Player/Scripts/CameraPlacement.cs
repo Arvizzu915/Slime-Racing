@@ -1,7 +1,7 @@
 using UnityEngine;
 using Mirror;
 
-public class CameraPlacement : NetworkBehaviour
+public class CameraPlacement : MonoBehaviour
 {
     public static CameraPlacement singleton;
 
@@ -13,7 +13,7 @@ public class CameraPlacement : NetworkBehaviour
     [SerializeField] private float minX = -10f;
     [SerializeField] private float maxX = 10f;
 
-    public Vector3 posPivot;
+    public Vector3 posPivot, cameraOffset = new(20f, 8f, -10f);
 
     private void Awake()
     {
@@ -34,8 +34,11 @@ public class CameraPlacement : NetworkBehaviour
 
     void MoveCamera()
     {
-        if (!isOwned) return;
-        
+        if (PlayerGeneral.singleton == null)
+        {
+            return;
+        }
 
+        transform.position = PlayerGeneral.singleton.transform.position + cameraOffset;
     }
 }
